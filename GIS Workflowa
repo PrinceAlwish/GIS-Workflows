@@ -1,0 +1,20 @@
+flowchart TB
+    A[Start] --> B[Collect Raw Data]
+    B --> C[Preprocess Data]
+    C --> D[Data Cleaning]
+    D --> E[Georeferencing]
+    E --> F[Digitizing Features]
+    F --> G[Create Spatial Layers]
+    G --> H[Data Integration]
+    H --> I[Perform Spatial Analysis]
+    I --> J[Generate Maps & Visualizations]
+    J --> K[Export Data]
+    K --> L[Review & Validate Results]
+    L --> M[End]
+
+    %% Optional branching or decision points
+    L --> N{Is the data accurate?}
+    N -->|Yes| O[Complete Project]
+    N -->|No| P[Refine Analysis]
+    P --> I
+    O --> M
